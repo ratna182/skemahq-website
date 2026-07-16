@@ -1,26 +1,35 @@
 export const featuredProjects = [
     {
         id: 1,
-        title: "Men's Biore",
+        slug: "mens-biore-activation",
+        client: "Men's Biore",
+        title: "Men's Biore Activation",
         category: "Exhibition Booth",
         year: "2024",
-        image:
-            "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1400&auto=format&fit=crop",
+        image: "/portfolio/placeholder.jpg",
+        shortDescription:
+            "Interactive exhibition booth and immersive brand activation for Men's Biore.",
     },
     {
         id: 2,
-        title: "Laurier",
+        slug: "laurier-experience",
+        client: "Laurier",
+        title: "Laurier Experience Event",
         category: "Event Activation",
         year: "2024",
-        image:
-            "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1400&auto=format&fit=crop",
+        image: "/portfolio/placeholder.jpg",
+        shortDescription:
+            "Lifestyle event activation designed to strengthen Laurier's connection with modern consumers.",
     },
     {
         id: 3,
-        title: "Attack",
+        slug: "attack-sales-promotion",
+        client: "Attack",
+        title: "Attack Sales Promotion",
         category: "Sales Promotion",
         year: "2023",
-        image:
-            "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=1400&auto=format&fit=crop",
+        image: "/portfolio/placeholder.jpg",
+        shortDescription:
+            "Retail sales promotion campaign focused on increasing visibility and customer engagement.",
     },
 ];

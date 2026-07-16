@@ -1,30 +1,34 @@
-import { PortfolioProject } from "@/types/portfolio";
-
-export const portfolioProjects: PortfolioProject[] = [
+export const portfolioItems = [
     {
-        id: "1",
-        slug: "wardah-beauty-fair",
-
-        title: "Wardah Beauty Fair",
-
-        category: "booth-pameran",
-
-        client: "Wardah",
-
-        year: 2024,
-
-        shortDescription:
-            "Modern exhibition booth designed for Wardah Beauty Fair.",
-
-        fullDescription:
-            "Skema HQ designed and built a premium beauty exhibition booth for Wardah, creating an engaging visitor experience with product showcase, consultation area, and interactive branding.",
-
-        coverImage: "/images/portfolio/wardah-cover.jpg",
-
-        gallery: [
-            "/images/portfolio/wardah-1.jpg",
-            "/images/portfolio/wardah-2.jpg",
-            "/images/portfolio/wardah-3.jpg",
-        ],
+        title: "Samsung Smartphone Launch",
+        category: "Product Launch",
+        year: "2024",
+        image: "/portfolio/placeholder.jpg",
+        description:
+            "Premium launch event for Samsung's newest smartphone with immersive brand experience.",
+    },
+    {
+        title: "Men's Biore Activation",
+        category: "Brand Activation",
+        year: "2024",
+        image: "/portfolio/placeholder.jpg",
+        description:
+            "Interactive consumer activation for Men's Biore campaign across major cities.",
+    },
+    {
+        title: "Attack Exhibition Booth",
+        category: "Exhibition",
+        year: "2023",
+        image: "/portfolio/placeholder.jpg",
+        description:
+            "Modern exhibition booth designed to maximize visitor engagement and product visibility.",
+    },
+    {
+        title: "Merries Family Event",
+        category: "Family Experience",
+        year: "2023",
+        image: "/portfolio/placeholder.jpg",
+        description:
+            "Family-focused experiential event strengthening Merries' connection with parents.",
     },
 ];

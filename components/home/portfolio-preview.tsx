@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import Container from "../ui/container";
@@ -5,78 +6,91 @@ import { featuredProjects } from "@/data/featured-projects";
 
 export default function PortfolioPreview() {
     return (
-        <section className="py-32">
+        <section className="py-32 border-t border-neutral-200">
             <Container>
-                <div className="flex items-end justify-between">
+
+                <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+
                     <div>
                         <p className="text-sm uppercase tracking-[0.3em] text-neutral-500">
                             Selected Works
                         </p>
 
-                        <h2 className="mt-4 text-5xl font-bold leading-tight">
+                        <h2 className="mt-4 text-5xl font-bold leading-tight md:text-6xl">
                             Brands We've
                             <br />
-                            Helped Come
-                            <br />
-                            To Life.
+                            Helped Grow.
                         </h2>
                     </div>
 
                     <Link
                         href="/portfolio"
-                        className="hidden md:block text-sm font-semibold uppercase tracking-widest"
+                        className="text-sm font-semibold uppercase tracking-[0.2em] transition hover:text-neutral-500"
                     >
-                        View All →
+                        View All Projects →
                     </Link>
+
                 </div>
 
-                <div className="mt-20 space-y-24">
+                <div className="mt-20 grid gap-12 md:grid-cols-3">
+
                     {featuredProjects.map((project) => (
-                        <article key={project.id}>
-                            <div className="overflow-hidden rounded-[32px]">
 
-                                <img
-                                    src={project.image}
-                                    alt={project.title}
-                                    className="h-[550px] w-full object-cover transition duration-700 hover:scale-105"
-                                />
+                        <article
+                            key={project.id}
+                            className="group"
+                        >
 
-                            </div>
+                            <Link href="/portfolio">
 
-                            <div className="mt-8 flex items-center justify-between">
+                                <div className="overflow-hidden rounded-3xl bg-neutral-100">
 
-                                <div>
-
-                                    <p className="text-sm uppercase tracking-[0.2em] text-neutral-500">
-                                        {project.category}
-                                    </p>
-
-                                    <h3 className="mt-2 text-3xl font-bold">
-                                        {project.title}
-                                    </h3>
+                                    <Image
+                                        src={project.image}
+                                        alt={project.title}
+                                        width={800}
+                                        height={600}
+                                        className="h-72 w-full object-cover transition duration-700 group-hover:scale-105"
+                                    />
 
                                 </div>
 
-                                <div className="text-right">
+                            </Link>
 
-                                    <p className="text-neutral-500">
+                            <div className="mt-6">
+
+                                <p className="text-sm uppercase tracking-[0.2em] text-neutral-500">
+                                    {project.client}
+                                </p>
+
+                                <h3 className="mt-2 text-2xl font-bold">
+                                    {project.title}
+                                </h3>
+
+                                <p className="mt-3 leading-7 text-neutral-600">
+                                    {project.shortDescription}
+                                </p>
+
+                                <div className="mt-6 flex items-center justify-between">
+
+                                    <span className="text-sm text-neutral-500">
+                                        {project.category}
+                                    </span>
+
+                                    <span className="text-sm text-neutral-500">
                                         {project.year}
-                                    </p>
-
-                                    <Link
-                                        href="/portfolio"
-                                        className="mt-2 block font-semibold"
-                                    >
-                                        View Project →
-                                    </Link>
+                                    </span>
 
                                 </div>
 
                             </div>
 
                         </article>
+
                     ))}
+
                 </div>
+
             </Container>
         </section>
     );
