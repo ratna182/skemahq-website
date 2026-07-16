@@ -1,64 +1,76 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import Container from "../ui/container";
-import { portfolioItems } from "@/data/portfolio";
+import { featuredProjects } from "@/data/featured-projects";
 
 export default function PortfolioGallery() {
     return (
-        <section className="border-t border-neutral-200 py-24">
+        <section className="py-32">
             <Container>
-                <div className="max-w-3xl">
-                    <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-neutral-500">
-                        Selected Works
+
+                <div className="mb-20">
+
+                    <p className="uppercase tracking-[0.3em] text-sm text-neutral-500">
+                        Portfolio
                     </p>
 
-                    <h2 className="text-4xl font-bold md:text-6xl">
-                        Projects that
-                        <br />
-                        create memorable
-                        <br />
-                        brand experiences.
-                    </h2>
+                    <h1 className="mt-5 text-6xl font-bold">
+                        Our Selected Works
+                    </h1>
 
-                    <p className="mt-6 text-lg leading-8 text-neutral-600">
-                        From nationwide product launches to premium exhibition
-                        booths, we deliver experiences that strengthen brands
-                        and connect with consumers.
+                    <p className="mt-6 max-w-2xl text-neutral-600 leading-8">
+                        Every project is designed to elevate brand experience,
+                        strengthen customer engagement, and create memorable
+                        moments.
                     </p>
+
                 </div>
 
-                <div className="mt-20 grid gap-8 md:grid-cols-2">
-                    {portfolioItems.map((project) => (
-                        <article
-                            key={project.title}
-                            className="group overflow-hidden rounded-3xl border border-neutral-200 bg-white transition hover:-translate-y-2 hover:shadow-2xl"
+                <div className="grid gap-12 md:grid-cols-2">
+
+                    {featuredProjects.map((project) => (
+
+                        <Link
+                            key={project.id}
+                            href={`/portfolio/${project.slug}`}
+                            className="group"
                         >
-                            <div className="relative aspect-[4/3] overflow-hidden bg-neutral-100">
+
+                            <div className="overflow-hidden rounded-3xl">
+
                                 <Image
                                     src={project.image}
                                     alt={project.title}
-                                    fill
-                                    className="object-cover transition duration-700 group-hover:scale-110"
+                                    width={900}
+                                    height={700}
+                                    className="h-96 w-full object-cover transition duration-700 group-hover:scale-105"
                                 />
+
                             </div>
 
-                            <div className="p-8">
-                                <div className="mb-3 flex items-center justify-between text-sm uppercase tracking-widest text-neutral-500">
-                                    <span>{project.category}</span>
-                                    <span>{project.year}</span>
-                                </div>
+                            <div className="mt-6">
 
-                                <h3 className="text-2xl font-bold">
-                                    {project.title}
-                                </h3>
-
-                                <p className="mt-4 leading-7 text-neutral-600">
-                                    {project.description}
+                                <p className="uppercase tracking-[0.2em] text-sm text-neutral-500">
+                                    {project.client}
                                 </p>
+
+                                <h2 className="mt-2 text-3xl font-bold">
+                                    {project.title}
+                                </h2>
+
+                                <p className="mt-3 text-neutral-600">
+                                    {project.shortDescription}
+                                </p>
+
                             </div>
-                        </article>
+
+                        </Link>
+
                     ))}
+
                 </div>
+
             </Container>
         </section>
     );

@@ -6,7 +6,7 @@ import { featuredProjects } from "@/data/featured-projects";
 
 export default function PortfolioPreview() {
     return (
-        <section className="py-32 border-t border-neutral-200">
+        <section className="border-t border-neutral-200 py-32">
             <Container>
 
                 <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
@@ -41,7 +41,7 @@ export default function PortfolioPreview() {
                             className="group"
                         >
 
-                            <Link href="/portfolio">
+                            <Link href={`/portfolio/${project.slug}`}>
 
                                 <div className="overflow-hidden rounded-3xl bg-neutral-100">
 
@@ -82,6 +82,13 @@ export default function PortfolioPreview() {
                                     </span>
 
                                 </div>
+
+                                <Link
+                                    href={`/portfolio/${project.slug}`}
+                                    className="mt-6 inline-block font-semibold transition hover:text-neutral-500"
+                                >
+                                    View Case Study →
+                                </Link>
 
                             </div>
 

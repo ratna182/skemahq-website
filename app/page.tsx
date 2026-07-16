@@ -6,7 +6,6 @@ import PortfolioPreview from "@/components/home/portfolio-preview";
 import WhySkema from "@/components/home/why-skema";
 import Testimonials from "@/components/home/testimonials";
 import CTA from "@/components/home/cta";
-import Footer from "@/components/layout/footer";
 
 export default function HomePage() {
     return (
@@ -19,7 +18,6 @@ export default function HomePage() {
             <WhySkema />
             <Testimonials />
             <CTA />
-            <Footer />
         </>
     );
 }
