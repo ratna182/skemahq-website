@@ -2,15 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Container from "../ui/container";
-import { featuredProjects } from "@/data/featured-projects";
+import { portfolioItems } from "@/data/portfolio";
 
 export default function PortfolioPreview() {
+    const featuredProjects = portfolioItems.slice(0, 3);
+
     return (
         <section className="border-t border-neutral-200 py-32">
             <Container>
-
                 <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
-
                     <div>
                         <p className="text-sm uppercase tracking-[0.3em] text-neutral-500">
                             Selected Works
@@ -29,36 +29,27 @@ export default function PortfolioPreview() {
                     >
                         View All Projects →
                     </Link>
-
                 </div>
 
                 <div className="mt-20 grid gap-12 md:grid-cols-3">
-
                     {featuredProjects.map((project) => (
-
                         <article
                             key={project.id}
                             className="group"
                         >
-
                             <Link href={`/portfolio/${project.slug}`}>
-
                                 <div className="overflow-hidden rounded-3xl bg-neutral-100">
-
                                     <Image
-                                        src={project.image}
+                                        src={project.coverImage}
                                         alt={project.title}
-                                        width={800}
-                                        height={600}
+                                        width={900}
+                                        height={700}
                                         className="h-72 w-full object-cover transition duration-700 group-hover:scale-105"
                                     />
-
                                 </div>
-
                             </Link>
 
                             <div className="mt-6">
-
                                 <p className="text-sm uppercase tracking-[0.2em] text-neutral-500">
                                     {project.client}
                                 </p>
@@ -72,7 +63,6 @@ export default function PortfolioPreview() {
                                 </p>
 
                                 <div className="mt-6 flex items-center justify-between">
-
                                     <span className="text-sm text-neutral-500">
                                         {project.category}
                                     </span>
@@ -80,24 +70,18 @@ export default function PortfolioPreview() {
                                     <span className="text-sm text-neutral-500">
                                         {project.year}
                                     </span>
-
                                 </div>
 
                                 <Link
                                     href={`/portfolio/${project.slug}`}
-                                    className="mt-6 inline-block font-semibold transition hover:text-neutral-500"
+                                    className="mt-6 inline-flex items-center font-semibold transition hover:translate-x-1"
                                 >
                                     View Case Study →
                                 </Link>
-
                             </div>
-
                         </article>
-
                     ))}
-
                 </div>
-
             </Container>
         </section>
     );

@@ -1,37 +1,37 @@
 export const featuredProjects = [
     {
         id: 1,
-        slug: "biore-uv",
+        slug: "biore-uv-activation",
         client: "Biore UV",
         title: "Biore UV Activation",
         category: "Retail Activation",
         year: "2024",
-        image: "/portfolio/biore-uv/cover.jpeg",
+        image: "/portfolio/biore-uv/cover.webp",
         shortDescription:
             "Interactive retail activation showcasing Biore UV through premium consumer experiences.",
     },
 
     {
         id: 2,
-        slug: "mens-biore",
-        client: "Men's Biore",
-        title: "Men's Biore Activation",
-        category: "Brand Activation",
+        slug: "samsung-smartphone-launch",
+        client: "Samsung",
+        title: "Samsung Smartphone Launch",
+        category: "Product Launch",
         year: "2024",
-        image: "/portfolio/placeholder.jpg",
+        image: "/portfolio/samsung/cover.webp",
         shortDescription:
-            "Interactive exhibition booth and immersive brand activation for Men's Biore.",
+            "Premium smartphone launch with immersive brand experience and interactive product showcase.",
     },
 
     {
         id: 3,
-        slug: "attack",
-        client: "Attack",
-        title: "Attack Sales Promotion",
-        category: "Sales Promotion",
-        year: "2023",
-        image: "/portfolio/placeholder.jpg",
+        slug: "merries-family-event",
+        client: "Merries",
+        title: "Merries Family Event",
+        category: "Family Experience",
+        year: "2024",
+        image: "/portfolio/merries/cover.webp",
         shortDescription:
-            "Retail sales promotion campaign focused on increasing visibility and customer engagement.",
+            "Family activation designed to strengthen Merries' connection with parents and children.",
     },
 ];
