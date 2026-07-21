@@ -54,26 +54,37 @@ export default function Footer() {
                             Company
                         </h3>
 
-                        <ul className="space-y-3">
-
+                        <ul className="space-y-3 text-neutral-400 text-sm">
                             <li>
-                                <Link href="/">
+                                <Link href="/" className="hover:text-white transition">
                                     Home
                                 </Link>
                             </li>
-
                             <li>
-                                <Link href="/portfolio">
+                                <Link href="/services" className="hover:text-white transition">
+                                    Services
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/portfolio" className="hover:text-white transition">
                                     Portfolio
                                 </Link>
                             </li>
-
                             <li>
-                                <Link href="/contact">
+                                <Link href="/estimator" className="hover:text-amber-400 transition text-white font-medium">
+                                    Cost Estimator ⚡
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/track" className="hover:text-amber-400 transition text-white font-medium">
+                                    Project Tracker 📍
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/contact" className="hover:text-white transition">
                                     Contact
                                 </Link>
                             </li>
-
                         </ul>
 
                     </div>
