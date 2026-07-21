@@ -3,247 +3,147 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowRight, Briefcase, Award, Layers, CheckCircle2 } from "lucide-react";
 import Container from "../ui/container";
 
 export default function Hero() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: [0.16, 1, 0.3, 1] as const,
-      },
-    },
-  };
-
-  const visualVariants = {
-    hidden: { opacity: 0, scale: 0.9, y: 40 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      y: 0,
-      transition: {
-        duration: 1,
-        delay: 0.4,
-        ease: [0.16, 1, 0.3, 1] as const,
-      },
-    },
-  };
-
   return (
-    <section className="relative overflow-hidden pt-12 pb-20 md:py-32 flex min-h-[90vh] items-center">
-      {/* Background Ambient Glow & Patterns */}
-      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <motion.div
-          animate={{
-            scale: [1, 1.15, 1],
-            opacity: [0.3, 0.5, 0.3],
-            x: [0, 20, 0],
-            y: [0, -20, 0],
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute -top-32 right-0 h-[500px] w-[500px] rounded-full bg-gradient-to-br from-neutral-200 via-neutral-100 to-transparent blur-[100px]"
-        />
-        <motion.div
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.25, 0.45, 0.25],
-            x: [0, -30, 0],
-            y: [0, 30, 0],
-          }}
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute top-1/2 -left-32 h-[450px] w-[450px] rounded-full bg-gradient-to-tr from-neutral-300 via-neutral-100 to-transparent blur-[120px]"
-        />
-
-        {/* Subtle grid pattern background */}
-        <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px] opacity-60 [mask-image:radial-gradient(ellipse_60%_50%_at_50%_40%,#000_70%,transparent_100%)]" />
-      </div>
-
+    <section className="relative overflow-hidden pt-12 pb-16 md:pt-16 md:pb-24">
       <Container>
-        <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
-          {/* Main Content Area */}
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            className="lg:col-span-7"
+        {/* Centered Cuberto-Style Headline Section */}
+        <div className="mx-auto max-w-4xl text-center">
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="text-4xl font-extrabold tracking-tight text-neutral-950 sm:text-6xl md:text-7xl lg:text-8xl leading-[1.08]"
           >
-            {/* Tagline Badge */}
-            <motion.div variants={itemVariants} className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-neutral-200 bg-white/80 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.25em] text-neutral-800 shadow-xs backdrop-blur-md">
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-neutral-900 opacity-75"></span>
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-neutral-900"></span>
-              </span>
-              Creative Production House
-            </motion.div>
+            Creative production & <br className="hidden sm:inline" />
+            event activation agency
+          </motion.h1>
 
-            {/* Headline */}
-            <motion.h1
-              variants={itemVariants}
-              className="text-5xl font-black tracking-tight text-neutral-950 md:text-7xl lg:text-8xl leading-[1.05]"
-            >
-              We Build{" "}
-              <span className="relative inline-block bg-gradient-to-r from-neutral-950 via-neutral-800 to-neutral-600 bg-clip-text text-transparent">
-                Extraordinary
-              </span>{" "}
-              Brand Experiences.
-            </motion.h1>
-
-            {/* Subtitle */}
-            <motion.p
-              variants={itemVariants}
-              className="mt-8 max-w-xl text-lg leading-relaxed text-neutral-600 md:text-xl"
-            >
-              Skema HQ specializes in exhibition booths, event activations, and sales promotion with premium execution and impactful visual experiences.
-            </motion.p>
-
-            {/* Actions */}
-            <motion.div variants={itemVariants} className="mt-10 flex flex-wrap items-center gap-4">
-              <Link
-                href="/portfolio"
-                className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full bg-neutral-950 px-8 py-4 font-medium text-white shadow-lg transition-all duration-300 hover:bg-neutral-800 hover:shadow-xl active:scale-95"
-              >
-                <span>View Portfolio</span>
-                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-              </Link>
-
-              <Link
-                href="/contact"
-                className="group inline-flex items-center justify-center gap-2 rounded-full border border-neutral-300 bg-white/70 px-8 py-4 font-medium text-neutral-900 backdrop-blur-xs transition-all duration-300 hover:border-neutral-950 hover:bg-white hover:shadow-md active:scale-95"
-              >
-                <span>Let&apos;s Talk</span>
-              </Link>
-            </motion.div>
-
-            {/* Quick Trust Highlights */}
-            <motion.div
-              variants={itemVariants}
-              className="mt-12 flex flex-wrap items-center gap-8 border-t border-neutral-200/80 pt-6 text-xs font-semibold tracking-wider uppercase text-neutral-500"
-            >
-              <div className="flex items-center gap-2">
-                <Award className="h-4 w-4 text-neutral-900" />
-                <span>KAO Group Partner</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Briefcase className="h-4 w-4 text-neutral-900" />
-                <span>120+ Projects Completed</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Layers className="h-4 w-4 text-neutral-900" />
-                <span>End-to-End Production</span>
-              </div>
-            </motion.div>
-          </motion.div>
-
-          {/* Right Visual Card Stack / Showcase */}
-          <motion.div
-            variants={visualVariants}
-            initial="hidden"
-            animate="visible"
-            className="relative lg:col-span-5"
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+            className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-neutral-600 sm:text-lg md:text-xl"
           >
-            <div className="relative mx-auto max-w-md lg:max-w-none">
-              {/* Back Card Decoration */}
+            We help leading companies build scalable exhibition booths, immersive event activations, and carefully crafted creative production.
+          </motion.p>
+        </div>
+
+        {/* Cuberto Hero Showcase Card Container */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.96, y: 40 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+          className="mt-12 sm:mt-16"
+        >
+          <div className="group relative mx-auto overflow-hidden rounded-[28px] sm:rounded-[36px] md:rounded-[44px] bg-[#0c0d12] p-4 sm:p-8 md:p-12 shadow-2xl border border-neutral-800/80">
+            {/* Background Glowing Fluid Mesh */}
+            <div className="pointer-events-none absolute inset-0 overflow-hidden">
               <motion.div
                 animate={{
-                  rotate: [-3, -1, -3],
-                  y: [0, -8, 0],
+                  x: [0, 40, 0],
+                  y: [0, -30, 0],
+                  scale: [1, 1.15, 1],
                 }}
                 transition={{
-                  duration: 6,
+                  duration: 16,
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-neutral-300 via-neutral-100 to-neutral-200 opacity-60 blur-xs"
+                className="absolute -top-32 -left-32 h-[500px] w-[500px] rounded-full bg-gradient-to-br from-indigo-900/40 via-blue-900/30 to-transparent blur-[120px]"
               />
-
-              {/* Main Feature Showcase Card */}
               <motion.div
-                whileHover={{ y: -6, rotate: 1 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className="relative overflow-hidden rounded-3xl border border-neutral-200 bg-white p-4 shadow-2xl backdrop-blur-xl"
+                animate={{
+                  x: [0, -30, 0],
+                  y: [0, 40, 0],
+                  scale: [1, 1.2, 1],
+                }}
+                transition={{
+                  duration: 20,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="absolute -bottom-32 -right-32 h-[600px] w-[600px] rounded-full bg-gradient-to-tl from-sky-800/30 via-slate-900/40 to-transparent blur-[140px]"
+              />
+              {/* Subtle wave line pattern overlay */}
+              <div className="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:32px_32px] opacity-[0.04]" />
+            </div>
+
+            {/* Showcase 3D Composition */}
+            <div className="relative min-h-[380px] sm:min-h-[480px] md:min-h-[560px] w-full flex items-center justify-center py-6">
+              
+              {/* Floating Mobile Device Mockup (Top-Left Perspective) */}
+              <motion.div
+                initial={{ opacity: 0, x: -40, y: -20, rotate: -12 }}
+                animate={{ opacity: 1, x: 0, y: 0, rotate: -14 }}
+                whileHover={{ rotate: -8, scale: 1.05 }}
+                transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
+                className="absolute left-4 sm:left-12 md:left-24 top-6 sm:top-10 z-20 w-[120px] sm:w-[170px] md:w-[220px] rounded-[24px] sm:rounded-[32px] border-4 border-neutral-800 bg-neutral-950 p-1.5 shadow-2xl shadow-black/80"
               >
-                <div className="relative h-[340px] w-full overflow-hidden rounded-2xl bg-neutral-900 sm:h-[400px]">
+                <div className="relative h-[220px] sm:h-[320px] md:h-[400px] w-full overflow-hidden rounded-[18px] sm:rounded-[24px] bg-neutral-900">
                   <Image
-                    src="/portfolio/samsung/cover.webp"
-                    alt="Samsung Smartphone Launch by Skema HQ"
+                    src="/portfolio/biore-uv/cover.webp"
+                    alt="Biore UV Event Activation Mobile View"
                     fill
-                    priority
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover transition-transform duration-700 hover:scale-105"
+                    sizes="(max-width: 768px) 150px, 220px"
+                    className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-neutral-950/20 to-transparent" />
-                  
-                  {/* Floating Tag in Image */}
-                  <div className="absolute top-4 left-4 rounded-full bg-neutral-950/70 px-3.5 py-1.5 text-xs font-medium text-white backdrop-blur-md border border-white/10">
-                    Featured Project
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                </div>
+              </motion.div>
+
+              {/* Central Laptop perspective mockup */}
+              <motion.div
+                initial={{ opacity: 0, y: 30, rotateX: 10 }}
+                animate={{ opacity: 1, y: 0, rotateX: 0 }}
+                transition={{ duration: 0.9, delay: 0.4 }}
+                className="relative z-10 w-full max-w-3xl transform sm:translate-x-10 md:translate-x-16"
+              >
+                <div className="relative rounded-2xl border border-neutral-700/60 bg-neutral-900 p-2 shadow-2xl shadow-black/90 backdrop-blur-md">
+                  {/* Laptop Top Bar */}
+                  <div className="flex h-6 items-center gap-1.5 px-3">
+                    <div className="h-2.5 w-2.5 rounded-full bg-red-500/80" />
+                    <div className="h-2.5 w-2.5 rounded-full bg-yellow-500/80" />
+                    <div className="h-2.5 w-2.5 rounded-full bg-green-500/80" />
+                    <div className="ml-4 h-3 w-48 rounded-full bg-neutral-800/80" />
                   </div>
 
-                  {/* Card Bottom Details */}
-                  <div className="absolute bottom-6 left-6 right-6 text-white">
-                    <p className="text-xs uppercase tracking-widest text-neutral-300 font-semibold">
-                      Samsung Launch Event
-                    </p>
-                    <h3 className="mt-1 text-xl font-bold text-white">
-                      Immersive Brand Activation & Booth
-                    </h3>
+                  {/* Laptop Screen Content */}
+                  <div className="relative h-[240px] sm:h-[360px] md:h-[440px] w-full overflow-hidden rounded-xl bg-neutral-950">
+                    <Image
+                      src="/portfolio/samsung/cover.webp"
+                      alt="Samsung Launch Event Activation by Skema HQ"
+                      fill
+                      priority
+                      sizes="(max-width: 1200px) 100vw, 800px"
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    
+                    {/* Floating Lens / Badge Pill */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <Link
+                        href="/portfolio"
+                        className="group/btn inline-flex items-center gap-3 rounded-full bg-white/20 px-6 py-3 text-xs sm:text-sm font-semibold tracking-wider text-white backdrop-blur-md border border-white/30 transition-all duration-300 hover:bg-white hover:text-neutral-950 hover:scale-110 shadow-2xl"
+                      >
+                        <span>VIEW CASE STUDY</span>
+                      </Link>
+                    </div>
+
+                    <div className="absolute bottom-4 left-6 right-6 flex items-center justify-between text-white/90">
+                      <div>
+                        <p className="text-xs uppercase tracking-widest text-neutral-400 font-medium">Samsung Activation</p>
+                        <p className="text-sm font-semibold text-white sm:text-base">Immersive Booth & Experience Design</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-
-                {/* Floating Micro Badge 1: Stats */}
-                <motion.div
-                  initial={{ opacity: 0, x: -30 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.8, duration: 0.6 }}
-                  whileHover={{ scale: 1.05 }}
-                  className="absolute -bottom-5 -left-5 rounded-2xl border border-neutral-200 bg-white/95 p-4 shadow-xl backdrop-blur-md hidden sm:flex items-center gap-3"
-                >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-neutral-950 text-white font-bold text-sm">
-                    100%
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold text-neutral-950">On-Time Execution</p>
-                    <p className="text-[10px] text-neutral-500 uppercase tracking-wider">Zero Compromise</p>
-                  </div>
-                </motion.div>
-
-                {/* Floating Micro Badge 2: Client */}
-                <motion.div
-                  initial={{ opacity: 0, x: 30 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.9, duration: 0.6 }}
-                  whileHover={{ scale: 1.05 }}
-                  className="absolute -top-5 -right-5 rounded-2xl border border-neutral-200 bg-white/95 px-4 py-3 shadow-xl backdrop-blur-md hidden sm:flex items-center gap-2"
-                >
-                  <CheckCircle2 className="h-4 w-4 text-emerald-600" />
-                  <span className="text-xs font-bold text-neutral-950">Exhibition Specialist</span>
-                </motion.div>
               </motion.div>
+
             </div>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
       </Container>
     </section>
   );

@@ -7,6 +7,7 @@ export const siteConfig = {
 
     links: {
         instagram: "https://instagram.com/skemahq",
+        linkedin: "https://linkedin.com/company/skemahq",
         email: "firmanskema@gmail.com",
         phone: "+62 878-8952-7901",
         address: "Jl. Sepakat V, RT.2/RW.1, Cilangkap, Kec. Cipayung, Kota Jakarta Timur, DKI Jakarta 13870",

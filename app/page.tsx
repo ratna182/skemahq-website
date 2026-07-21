@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Hero from "@/components/home/hero";
+import CubertoAbout from "@/components/home/cuberto-about";
 import TrustedBrands from "@/components/home/trusted-brands";
 import CompanyStats from "@/components/home/company-stats";
 import Services from "@/components/home/services";
@@ -52,6 +53,7 @@ export default function HomePage() {
     <>
       <ServiceJsonLd services={homeServices} />
       <Hero />
+      <CubertoAbout />
       <TrustedBrands />
       <CompanyStats />
       <Services />
