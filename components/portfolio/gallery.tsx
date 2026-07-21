@@ -13,7 +13,7 @@ export default function PortfolioGallery({
 
                 <div className="mb-16">
 
-                    <p className="text-sm uppercase tracking-[0.3em] text-neutral-500">
+                    <p className="text-sm uppercase tracking-[0.3em] text-neutral-600">
                         Project Gallery
                     </p>
 
@@ -34,7 +34,7 @@ export default function PortfolioGallery({
 
                             <Image
                                 src={image}
-                                alt={`Gallery ${index + 1}`}
+                                alt={`Exhibition project gallery detail ${index + 1}`}
                                 width={1200}
                                 height={900}
                                 className="h-full w-full object-cover transition duration-700 group-hover:scale-105"

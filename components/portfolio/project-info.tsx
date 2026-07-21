@@ -21,7 +21,7 @@ export default function PortfolioProjectInfo({
 
                     <div>
 
-                        <p className="text-sm uppercase tracking-[0.3em] text-neutral-500">
+                        <p className="text-sm uppercase tracking-[0.3em] text-neutral-600">
                             Project Overview
                         </p>
 
@@ -38,7 +38,7 @@ export default function PortfolioProjectInfo({
                     <div className="space-y-10">
 
                         <div>
-                            <p className="text-xs uppercase tracking-[0.3em] text-neutral-500">
+                            <p className="text-xs uppercase tracking-[0.3em] text-neutral-600">
                                 Client
                             </p>
 
@@ -48,7 +48,7 @@ export default function PortfolioProjectInfo({
                         </div>
 
                         <div>
-                            <p className="text-xs uppercase tracking-[0.3em] text-neutral-500">
+                            <p className="text-xs uppercase tracking-[0.3em] text-neutral-600">
                                 Category
                             </p>
 
@@ -58,7 +58,7 @@ export default function PortfolioProjectInfo({
                         </div>
 
                         <div>
-                            <p className="text-xs uppercase tracking-[0.3em] text-neutral-500">
+                            <p className="text-xs uppercase tracking-[0.3em] text-neutral-600">
                                 Year
                             </p>
 
@@ -68,7 +68,7 @@ export default function PortfolioProjectInfo({
                         </div>
 
                         <div>
-                            <p className="text-xs uppercase tracking-[0.3em] text-neutral-500">
+                            <p className="text-xs uppercase tracking-[0.3em] text-neutral-600">
                                 Services
                             </p>
 

@@ -16,7 +16,7 @@ export default function PortfolioNextProject({
         <section className="border-t border-neutral-200 py-24">
             <div className="mx-auto max-w-7xl px-6">
 
-                <p className="text-sm uppercase tracking-[0.3em] text-neutral-500">
+                <p className="text-sm uppercase tracking-[0.3em] text-neutral-600">
                     Next Project
                 </p>
 
@@ -45,7 +45,7 @@ export default function PortfolioNextProject({
                                 {title}
                             </h2>
 
-                            <p className="mt-3 text-neutral-500">
+                            <p className="mt-3 text-neutral-600">
                                 View Case Study
                             </p>
 

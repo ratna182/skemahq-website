@@ -100,7 +100,7 @@ export default function Footer() {
 
                 </div>
 
-                <div className="mt-20 border-t border-neutral-800 pt-8 text-sm text-neutral-500">
+                <div className="mt-20 border-t border-neutral-800 pt-8 text-sm text-neutral-400">
 
                     © 2025 Skema HQ. All rights reserved.
 

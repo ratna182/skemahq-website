@@ -21,7 +21,7 @@ export default function PortfolioHero({
         <section className="pt-32 pb-20">
             <div className="mx-auto max-w-7xl px-6">
 
-                <p className="text-sm uppercase tracking-[0.3em] text-neutral-500">
+                <p className="text-sm uppercase tracking-[0.3em] text-neutral-600">
                     Portfolio
                 </p>
 
@@ -29,7 +29,7 @@ export default function PortfolioHero({
                     {title}
                 </h1>
 
-                <div className="mt-8 flex flex-wrap gap-6 text-sm uppercase tracking-widest text-neutral-500">
+                <div className="mt-8 flex flex-wrap gap-6 text-sm uppercase tracking-widest text-neutral-600">
 
                     <span>{client}</span>
 
