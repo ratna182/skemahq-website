@@ -254,7 +254,7 @@ export default function ContactView() {
                           type="tel"
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          placeholder="+62 812-3456-7890"
+                          placeholder="+62 878-8952-7901"
                           className="w-full rounded-2xl border border-neutral-200 px-4 py-3.5 text-sm outline-none focus:border-neutral-950 focus:ring-1 focus:ring-neutral-950 transition"
                         />
                       </div>

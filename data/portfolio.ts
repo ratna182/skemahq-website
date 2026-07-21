@@ -23,7 +23,7 @@ export const portfolioItems: PortfolioItem[] = [
 
         category: "Product Launch",
 
-        year: "2024",
+        year: "2026",
 
         coverImage: "/portfolio/samsung/cover.webp",
 
@@ -60,7 +60,7 @@ export const portfolioItems: PortfolioItem[] = [
 
         category: "Retail Activation",
 
-        year: "2024",
+        year: "2026",
 
         coverImage: "/portfolio/biore-uv/cover.webp",
 
@@ -97,7 +97,7 @@ export const portfolioItems: PortfolioItem[] = [
 
         category: "Family Experience",
 
-        year: "2024",
+        year: "2026",
 
         coverImage: "/portfolio/merries/cover.webp",
 

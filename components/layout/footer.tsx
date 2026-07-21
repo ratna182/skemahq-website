@@ -86,13 +86,23 @@ export default function Footer() {
                             Contact
                         </h3>
 
-                        <ul className="space-y-3 text-neutral-400">
+                        <ul className="space-y-3 text-neutral-400 text-sm">
 
-                            <li>Jakarta, Indonesia</li>
+                            <li className="leading-relaxed">
+                                Jl. Sepakat V, RT.2/RW.1, Cilangkap, Kec. Cipayung, Kota Jakarta Timur, DKI Jakarta 13870
+                            </li>
 
-                            <li>hello@skemahq.com</li>
+                            <li>
+                                <a href="mailto:firmanskema@gmail.com" className="hover:text-white transition">
+                                    firmanskema@gmail.com
+                                </a>
+                            </li>
 
-                            <li>+62 812-3456-7890</li>
+                            <li>
+                                <a href="https://wa.me/6287889527901" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
+                                    +62 878-8952-7901
+                                </a>
+                            </li>
 
                         </ul>
 
@@ -102,7 +112,7 @@ export default function Footer() {
 
                 <div className="mt-20 border-t border-neutral-800 pt-8 text-sm text-neutral-400">
 
-                    © 2025 Skema HQ. All rights reserved.
+                    © 2026 Skema HQ. All rights reserved.
 
                 </div>
 

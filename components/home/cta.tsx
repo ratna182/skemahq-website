@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Container from "../ui/container";
 
 export default function CTA() {
@@ -28,16 +28,15 @@ export default function CTA() {
 
       <Container>
         <div className="mx-auto max-w-4xl text-center">
-          <motion.div
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-neutral-800 bg-neutral-900/80 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.3em] text-neutral-300 backdrop-blur-md"
+            className="mb-6 text-xs font-semibold uppercase tracking-[0.35em] text-neutral-400"
           >
-            <Sparkles className="h-3.5 w-3.5 text-amber-400" />
-            <span>Ready to Collaborate?</span>
-          </motion.div>
+            Ready to Collaborate?
+          </motion.p>
 
           <motion.h2
             initial={{ opacity: 0, y: 30 }}

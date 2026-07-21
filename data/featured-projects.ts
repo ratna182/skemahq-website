@@ -5,7 +5,7 @@ export const featuredProjects = [
         client: "Biore UV",
         title: "Biore UV Activation",
         category: "Retail Activation",
-        year: "2024",
+        year: "2026",
         image: "/portfolio/biore-uv/cover.webp",
         shortDescription:
             "Interactive retail activation showcasing Biore UV through premium consumer experiences.",
@@ -17,7 +17,7 @@ export const featuredProjects = [
         client: "Samsung",
         title: "Samsung Smartphone Launch",
         category: "Product Launch",
-        year: "2024",
+        year: "2026",
         image: "/portfolio/samsung/cover.webp",
         shortDescription:
             "Premium smartphone launch with immersive brand experience and interactive product showcase.",
@@ -29,7 +29,7 @@ export const featuredProjects = [
         client: "Merries",
         title: "Merries Family Event",
         category: "Family Experience",
-        year: "2024",
+        year: "2026",
         image: "/portfolio/merries/cover.webp",
         shortDescription:
             "Family activation designed to strengthen Merries' connection with parents and children.",

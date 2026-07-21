@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, Award, Layers } from "lucide-react";
+import { ArrowRight, Briefcase, Award, Layers, CheckCircle2 } from "lucide-react";
 import Container from "../ui/container";
 
 export default function Hero() {
@@ -147,7 +147,7 @@ export default function Hero() {
                 <span>KAO Group Partner</span>
               </div>
               <div className="flex items-center gap-2">
-                <Sparkles className="h-4 w-4 text-neutral-900" />
+                <Briefcase className="h-4 w-4 text-neutral-900" />
                 <span>120+ Projects Completed</span>
               </div>
               <div className="flex items-center gap-2">
@@ -237,7 +237,7 @@ export default function Hero() {
                   whileHover={{ scale: 1.05 }}
                   className="absolute -top-5 -right-5 rounded-2xl border border-neutral-200 bg-white/95 px-4 py-3 shadow-xl backdrop-blur-md hidden sm:flex items-center gap-2"
                 >
-                  <Sparkles className="h-4 w-4 text-amber-500" />
+                  <CheckCircle2 className="h-4 w-4 text-emerald-600" />
                   <span className="text-xs font-bold text-neutral-950">Exhibition Specialist</span>
                 </motion.div>
               </motion.div>
