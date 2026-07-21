@@ -7,6 +7,7 @@ import Services from "@/components/home/services";
 import PortfolioPreview from "@/components/home/portfolio-preview";
 import WhySkema from "@/components/home/why-skema";
 import Testimonials from "@/components/home/testimonials";
+import BlogPreview from "@/components/home/blog-preview";
 import CTA from "@/components/home/cta";
 import { ServiceJsonLd } from "@/components/seo/json-ld";
 
@@ -60,6 +61,7 @@ export default function HomePage() {
       <PortfolioPreview />
       <WhySkema />
       <Testimonials />
+      <BlogPreview />
       <CTA />
     </>
   );
