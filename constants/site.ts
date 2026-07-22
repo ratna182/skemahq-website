@@ -2,7 +2,7 @@ export const siteConfig = {
     name: "Skema HQ",
     description:
         "Creative production house specializing in exhibition booths, event activation, and sales promoter management.",
-    url: "https://skemahq.com",
+    url: "https://skemahq-website.vercel.app",
     ogImage: "/images/og-image.jpg",
 
     links: {
