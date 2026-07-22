@@ -1,9 +1,9 @@
 import { MetadataRoute } from "next";
 import { portfolioItems } from "@/data/portfolio";
-import { siteConfig } from "@/constants/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = siteConfig.url;
+  // Domain Vercel Anda
+  const baseUrl = "https://skemahq-website.vercel.app";
 
   const portfolioRoutes = portfolioItems.map((item) => ({
     url: `${baseUrl}/portfolio/${item.slug}`,
